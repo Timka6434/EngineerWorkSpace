@@ -143,7 +143,7 @@ namespace EngineerWorkSplace.ViewModels
             {
                 Console.WriteLine($"Ping failed: {ex.Message}");
             }
-            return -1; // Возвращает -1 в случае ошибки
+            return -1;
         }
 
         public async Task<int> CheckPingProxyAsync()
@@ -163,7 +163,7 @@ namespace EngineerWorkSplace.ViewModels
             {
                 Console.WriteLine($"Ping proxy failed: {ex.Message}");
             }
-            return -1; // Возвращает -1 в случае ошибки
+            return -1;
         }
 
         private async void StartMonitoring()
