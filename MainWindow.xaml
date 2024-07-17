@@ -18,8 +18,11 @@
                 <CheckBox IsChecked="{Binding EthernetAccess}" IsHitTestVisible="False"  Margin="118,34,0,0" HorizontalAlignment="Left" Width="17" Height="16" VerticalAlignment="Top" />
                 <TextBlock HorizontalAlignment="Left" Margin="10,31,0,0" TextWrapping="Wrap" Text="Доступ в интернет: " Height="16" VerticalAlignment="Top"/>
                 <TextBlock HorizontalAlignment="Left" Margin="10,52,0,0" TextWrapping="Wrap" Text="Пинг ЕСПД:  " VerticalAlignment="Top"/>
+                <TextBlock HorizontalAlignment="Left" Margin="75,52,0,0" TextWrapping="Wrap" Text="{Binding PingESPD}" VerticalAlignment="Top" Width="39"/>
                 <TextBlock HorizontalAlignment="Left" Margin="10,73,0,0" TextWrapping="Wrap" Text="Доступ прокси:" VerticalAlignment="Top"/>
+                <CheckBox IsChecked="{Binding ProxyAccess}" IsHitTestVisible="False"  Margin="96,76,0,0" HorizontalAlignment="Left" Width="18" Height="16" VerticalAlignment="Top" />
                 <TextBlock HorizontalAlignment="Left" Margin="10,94,0,0" TextWrapping="Wrap" Text="Пинг прокси:" VerticalAlignment="Top"/>
+                <TextBlock HorizontalAlignment="Left" Margin="86,94,0,0" TextWrapping="Wrap" Text="{Binding PingProxy}" VerticalAlignment="Top" Width="32"/>
             </Grid>
         </GroupBox>
     </Grid>
