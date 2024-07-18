@@ -6,14 +6,14 @@
         xmlns:local="clr-namespace:EngineerWorkSplace.ViewModels"
         mc:Ignorable="d"
         ResizeMode="NoResize"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="1240">
 
     <Window.DataContext>
         <local:ServiceESPD_VM/>
     </Window.DataContext>
 
     <Grid>
-        <GroupBox Header="Службы мониторинга" Margin="606,10,0,0" HorizontalAlignment="Left" Width="184" Height="269" VerticalAlignment="Top">
+        <GroupBox Header="Службы мониторинга" Margin="1046,10,0,0" HorizontalAlignment="Left" Width="184" Height="269" VerticalAlignment="Top">
             <Grid>
                 <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Доступность ЕСПД" VerticalAlignment="Top" FontWeight="Bold"/>
                 <CheckBox IsChecked="{Binding EthernetAccess}" IsHitTestVisible="False"  Margin="118,34,0,0" HorizontalAlignment="Left" Width="17" Height="16" VerticalAlignment="Top" />
@@ -27,15 +27,15 @@
                 <Separator/>
             </Grid>
         </GroupBox>
-        <GroupBox Header="Валидность Электронных Подписей" Margin="10,10,0,0" Height="269" VerticalAlignment="Top" HorizontalAlignment="Left" Width="591">
+        <GroupBox Header="Валидность Электронных Подписей" Margin="10,10,0,0" Height="269" VerticalAlignment="Top" HorizontalAlignment="Left" Width="1031">
             <Grid>
                 <Button Content="Настройки" Margin="0,226,0,0" Click="Button_Click"/>
-                <DataGrid ItemsSource="{Binding CertificatesList}" AutoGenerateColumns="False" Margin="10,10,10,25">
+                <DataGrid ItemsSource="{Binding CertificatesVM.CertificatesList}" AutoGenerateColumns="False" Margin="10,10,10,25">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="ФИО" Binding="{Binding FullName}" Width="*"/>
                         <DataGridTextColumn Header="Должность" Binding="{Binding Position}" Width="*"/>
-                        <DataGridTextColumn Header="Начало действия" Binding="{Binding StartTime}" Width="*"/>
-                        <DataGridTextColumn Header="Конец действия" Binding="{Binding EndTime}" Width="*"/>
+                        <DataGridTextColumn Header="Начало действия" Binding="{Binding StartTime, StringFormat=\{0:dd.MM.yyyy\}}" Width="*"/>
+                        <DataGridTextColumn Header="Конец действия" Binding="{Binding EndTime, StringFormat=\{0:dd.MM.yyyy\}}" Width="*"/>
                         <DataGridTextColumn Header="Дней осталось" Binding="{Binding DaysLeftToExpire}" Width="*"/>
                     </DataGrid.Columns>
                 </DataGrid>

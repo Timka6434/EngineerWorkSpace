@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EngineerWorkSplace.Models
 {
-    internal class Certificates
+    public class Certificates
     {
         public int Id { get; set; }
         public string FullName { get; set; }

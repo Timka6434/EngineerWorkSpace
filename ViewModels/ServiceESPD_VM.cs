@@ -30,8 +30,12 @@ namespace EngineerWorkSplace.ViewModels
                 Timeout = TimeSpan.FromSeconds(5)
             };
 
+            CertificatesVM = new Certificates_VM();
+
             StartMonitoring();
         }
+
+        public Certificates_VM CertificatesVM { get; }
 
         public bool ServiceStatus
         {
